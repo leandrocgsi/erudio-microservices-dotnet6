@@ -41,8 +41,8 @@ namespace ErudioMicroservices.NET6
             services.AddControllers();
 
             var connection = Configuration["MySQLConnection:MySQLConnectionString"];
-            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
-            
+            services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 15))));
+
             if (Environment.IsDevelopment())
             {
                 MigrateDatabase(connection);
@@ -70,9 +70,9 @@ namespace ErudioMicroservices.NET6
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "REST API's From 0 to Azure with ASP.NET Core 5 and Docker",
+                        Title = "Microservices from 0 to GCP with .NET 6, Steeltoe, Spring Cloud, Kubernetes and Docker",
                         Version = "v1",
-                        Description = "API RESTful developed in course 'REST API's From 0 to Azure with ASP.NET Core 5 and Docker'",
+                        Description = "API RESTful developed in course 'REST API's From 0 to Azure with ASP.NET 'Core' 6 and Docker'",
                         Contact = new OpenApiContact
                         {
                             Name = "Leandro Costa",
@@ -105,7 +105,7 @@ namespace ErudioMicroservices.NET6
 
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "REST API's From 0 to Azure with ASP.NET Core 5 and Docker - v1");
+                    "Microservices from 0 to GCP with .NET 6, Steeltoe, Spring Cloud, Kubernetes and Docker - v1");
             });
 
             var option = new RewriteOptions();
@@ -124,10 +124,10 @@ namespace ErudioMicroservices.NET6
         {
             try
             {
-                var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connection);
+                var evolveConnection = new MySqlConnector.MySqlConnection(connection);
                 var evolve = new Evolve.Evolve(evolveConnection, msg => Log.Information(msg))
                 {
-                    Locations = new List<string> { "db/migrations", "db/dataset" },
+                    Locations = new List<string> { "db/migrations", "db/seeders" },
                     IsEraseDisabled = true,
                 };
                 evolve.Migrate();
