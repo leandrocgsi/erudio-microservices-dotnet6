@@ -1,5 +1,5 @@
 # [Microservices do 0 à Google Cloud Platform com .NET 6, Steeltoe, Spring Cloud, Kubernetes e Docker](https://www.udemy.com/course/microservices-do-0-a-gcp-com-spring-boot-kubernetes-e-docker/?couponCode=GTHB_FLASH_SALE2021)
-### [Domine microsserviços com .NET 6, Spring Cloud, Docker, Kubernetes e Google Cloud Platform](https://www.udemy.com/course/microservices-do-0-a-gcp-com-spring-boot-kubernetes-e-docker/?couponCode=GTHB_FLASH_SALE2021)
+### [Domine microsserviços com .NET 6, Steeltoe, Spring Cloud, Docker, Kubernetes e Google Cloud Platform](https://www.udemy.com/course/microservices-do-0-a-gcp-com-spring-boot-kubernetes-e-docker/?couponCode=GTHB_FLASH_SALE2021)
 
 ![Forks](https://img.shields.io/github/forks/leandrocgsi/erudio-microservices-dotnet6)
 ![Stars](https://img.shields.io/github/stars/leandrocgsi/erudio-microservices-dotnet6)
