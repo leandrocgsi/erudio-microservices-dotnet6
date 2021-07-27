@@ -43,10 +43,10 @@ namespace ErudioMicroservices.NET6
             var connection = Configuration["MySQLConnection:MySQLConnectionString"];
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 15))));
 
-            if (Environment.IsDevelopment())
-            {
+            // if (Environment.IsDevelopment())
+            // {
                 MigrateDatabase(connection);
-            }
+            // }
 
             services.AddMvc(options =>
             {
