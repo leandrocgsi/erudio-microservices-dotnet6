@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "64bcf443-4c9f-4fbb-ae99-a01081a669d8",
-		"name": "REST API's From 0 to Azure with ASP.NET Core 5 and Docker",
-		"description": "API RESTful developed in course 'REST API's From 0 to Azure with ASP.NET Core 5 and Docker'\n\nContact Support:\n Name: Leandro Costa",
+		"name": "Microsservices with .NET 6, Docker and Kubernetes",
+		"description": "API RESTful developed in course 'REST API's From 0 to Azure with ASP.NET Core 6 and Docker'\n\nContact Support:\n Name: Leandro Costa",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
