@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductAPI.Migrations
 {
     [DbContext(typeof(MySQLContext))]
-    [Migration("20210811151745_SeedProductDataTable")]
-    partial class SeedProductDataTable
+    [Migration("20210821172820_AddDefaultSecurityTables")]
+    partial class AddDefaultSecurityTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
