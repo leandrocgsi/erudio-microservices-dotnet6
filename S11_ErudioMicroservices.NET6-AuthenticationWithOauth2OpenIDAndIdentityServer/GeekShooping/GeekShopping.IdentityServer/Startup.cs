@@ -45,11 +45,8 @@ namespace GeekShopping.IdentityServer
                     options.EmitStaticAudienceClaim = true;
                 }).AddInMemoryIdentityResources(
                         IdentityConfiguration.IdentityResources)
-                    .AddInMemoryApiScopes(IdentityConfiguration.ApiScopes)
                     .AddInMemoryClients(IdentityConfiguration.Clients)
                     .AddAspNetIdentity<ApplicationUser>();
-
-            services.AddScoped<IDbInitializer, DbInitializer>();
 
             builder.AddDeveloperSigningCredential();
 
@@ -58,8 +55,7 @@ namespace GeekShopping.IdentityServer
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, 
-            IWebHostEnvironment env, 
-            IDbInitializer initializer
+            IWebHostEnvironment env
         )
         {
             if (env.IsDevelopment())
@@ -75,8 +71,6 @@ namespace GeekShopping.IdentityServer
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
-
-            initializer.Initialize();
 
             app.UseEndpoints(endpoints =>
             {
