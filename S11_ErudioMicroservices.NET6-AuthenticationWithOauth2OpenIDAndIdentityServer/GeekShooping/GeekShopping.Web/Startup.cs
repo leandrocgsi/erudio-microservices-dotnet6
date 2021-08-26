@@ -25,7 +25,7 @@ namespace GeekShopping.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<IProductService, ProductService>(c =>
-                    c.BaseAddress = new Uri(Configuration["ServiveUrls:ProductAPI"])
+                    c.BaseAddress = new Uri(Configuration["ServiceUrls:ProductAPI"])
                 );
             services.AddControllersWithViews();
         }
@@ -41,6 +41,7 @@ namespace GeekShopping.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

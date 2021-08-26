@@ -1,5 +1,4 @@
 using GeekShopping.IdentityServer.Configuration;
-using GeekShopping.IdentityServer.Initializer;
 using GeekShopping.IdentityServer.Model;
 using GeekShopping.IdentityServer.Model.Context;
 using Microsoft.AspNetCore.Builder;
@@ -45,6 +44,7 @@ namespace GeekShopping.IdentityServer
                     options.EmitStaticAudienceClaim = true;
                 }).AddInMemoryIdentityResources(
                         IdentityConfiguration.IdentityResources)
+                    .AddInMemoryApiScopes(IdentityConfiguration.ApiScopes)    
                     .AddInMemoryClients(IdentityConfiguration.Clients)
                     .AddAspNetIdentity<ApplicationUser>();
 
@@ -66,6 +66,7 @@ namespace GeekShopping.IdentityServer
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
