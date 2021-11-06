@@ -1,0 +1,59 @@
+﻿@model GeekShopping.IdentityServer.MainModule.Account.RegisterViewModel
+
+<div class="login-page">
+    <div class="lead">
+        <h1>Register</h1>
+        <p>Choose how to register</p>
+    </div>
+     
+    <partial name="_ValidationSummary" />
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Local Account Register</h2>
+                </div>
+
+                <div class="card-body">
+                    <form asp-route="Login">
+                        <input type="hidden" asp-for="ReturnUrl" />
+
+                        <div class="form-group">
+                            <label asp-for="Username"></label>
+                            <input class="form-control" placeholder="Username" asp-for="Username" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input class="form-control" placeholder="email" asp-for="Email" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FirstName"></label>
+                            <input class="form-control" placeholder="first name" asp-for="FirstName" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastName"></label>
+                            <input class="form-control" placeholder="lastname" asp-for="LastName" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="RoleName"></label>
+                            <select asp-for="RoleName" class="form-control" asp-items="@(new SelectList(ViewBag.message))"></select>
+                        </div>
+                        <button class="btn btn-primary" name="button" value="Register">Register</button>
+                        <button class="btn btn-secondary" name="button" value="cancel">Cancel</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <a href="@Url.Action("Login",new {Model.ReturnUrl })">Login</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
