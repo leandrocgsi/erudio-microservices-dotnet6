@@ -43,40 +43,37 @@
                     @foreach (var item in Model.CartDetails)
                     {
                     <div class="row h-100">
-                        <div class="row text-info">
-                            <div class="col-4 col-md-2 text-center py-2">
-                                <img src="@item.Product.ImageURL" class="rounded" width="100%">
-                            </div>
-                            <div class="col-8 col-md-5">
-                                <h5>@item.Product.Name</h5>
-                                <div style="font-size:11px;">
-                                    @Html.Raw(item.Product.Description)
-                                </div>
-                            </div>
-                            <div class="col-3 col-md-2 pt-md-4" style="font-size:11px;">
-                                <span style="font-size:17px;">
-                                    @string.Format("{0:c}", item.Product.Price)
-                                </span>
-                            </div>
-                            <div class="col-3 col-md-2">
-                                <span style="font-size:17px;">
-                                    @item.Count
-                                </span>
-                            </div>
-                            <div class="col-2 col-md-1">
-                                <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-outline-danger">
-                                    <i class="fas fa-trash"></i>
-                                </a>
+                        <div class="col-4 col-md-2 text-center py-2">
+                            <img src="@item.Product.ImageURL" class="rounded" width="100%"/>
+                        </div>
+                        <div class="col-8 col-md-5">
+                            <h5>@item.Product.Name</h5>
+                            <div style="font-size:11px;">
+                                @Html.Raw(item.Product.Description)
                             </div>
                         </div>
+                        <div class="col-3 col-md-2 pt-md-4" style="font-size:11px;">
+                            <span style="font-size:17px;">
+                                @string.Format("{0:c}", item.Product.Price)
+                            </span>
+                        </div>
+                        <div class="col-3 col-md-2 pt-md-4" style="font-size:11px;">
+                            <span style="font-size:17px;">
+                                @item.Count
+                            </span>
+                        </div>
+                        <div class="col-2 col-lg-1 p-0 pt-lg-4 text-center">
+                            <a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-outline-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
                     </div>
-                    }
-
                     <hr/>
+                    }                   
                     <div class="row">
                         <div class="col-6">
                             <span>Coupon:</span>
-                            <input asp-for="CartHeader.CouponCode">
+                            <input asp-for="CartHeader.CouponCode"/>
                             <button type="submit" asp-action="ApplyCoupon" class="btn-success">
                                 Apply
                             </button>
