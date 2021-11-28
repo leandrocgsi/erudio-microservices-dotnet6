@@ -1,6 +1,7 @@
 using AutoMapper;
 using GeekShopping.CartAPI.Config;
 using GeekShopping.CartAPI.Model.Context;
+using GeekShopping.CartAPI.RabbitMQSender;
 using GeekShopping.CartAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,6 +46,7 @@ namespace GeekShopping.CartAPI
 
             services.AddScoped<ICartRepository, CartRepository>();
 
+            services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
             services.AddControllers();
 
             services.AddAuthentication("Bearer")
