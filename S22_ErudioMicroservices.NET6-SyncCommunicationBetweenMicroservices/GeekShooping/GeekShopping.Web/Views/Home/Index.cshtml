@@ -1,0 +1,30 @@
+﻿@model IEnumerable<GeekShopping.Web.Models.ProductViewModel>
+<form>
+    <div class="container row">
+        @foreach (var product in Model)
+        {
+            <div class="col-4">
+                <div class="p-0 my-3 border">
+                    <div class="card">
+                        <img src="@product.ImageURL" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title text-success">@product.SubstringName()</h3>
+                            <span class="badge badge-light mb-2">@product.CategoryName</span>
+                            <p class="card-text">@Html.Raw(product.SubstringDescription())</p>
+
+                            <div class="row">
+                                <div class="col pt-1">
+                                    <span style="font-size:23px;">@string.Format("{0:c}", product.Price)</span>
+                                </div>
+                                <div class="col">
+                                    <a asp-action="Details" asp-route-id="@product.Id"
+                                        class="btn btn-success form-control">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</form>
