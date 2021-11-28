@@ -1,5 +1,10 @@
 ﻿@model GeekShopping.Web.Models.CartViewModel
 
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-warning" role="alert">@TempData["Error"]</div>
+}
+
 @if (Model != null && Model.CartDetails.Count() > 0)
 {
     <form method="post">
