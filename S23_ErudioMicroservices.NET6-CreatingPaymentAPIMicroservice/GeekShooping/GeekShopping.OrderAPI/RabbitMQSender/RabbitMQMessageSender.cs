@@ -1,5 +1,5 @@
 ﻿using GeekShopping.MessageBus;
-using GeekShopping.OrderAPI.Model;
+using GeekShopping.OrderAPI.Messages;
 using RabbitMQ.Client;
 using System;
 using System.Text;
@@ -39,7 +39,7 @@ namespace GeekShopping.OrderAPI.RabbitMQSender
             {
                 WriteIndented = true,
             };
-            var json = JsonSerializer.Serialize((OrderHeader)message, options);
+            var json = JsonSerializer.Serialize<PaymentVO>((PaymentVO)message, options);
             var body = Encoding.UTF8.GetBytes(json);
             return body;
         }

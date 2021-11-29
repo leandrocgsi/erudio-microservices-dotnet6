@@ -1,6 +1,7 @@
 ﻿using GeekShopping.CartAPI.Repository;
 using GeekShopping.OrderAPI.Messages;
 using GeekShopping.OrderAPI.Model;
+using GeekShopping.OrderAPI.RabbitMQSender;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -19,10 +20,10 @@ namespace GeekShopping.OrderAPI.MessageConsumer
         private readonly OrderRepository _repository;
         private IConnection _connection;
         private IModel _channel;
-        public RabbitMQMessageSender _rabbitMQMessageSender;
+        private IRabbitMQMessageSender _rabbitMQMessageSender;
 
         public RabbitMQCheckoutConsumer(OrderRepository repository,
-            RabbitMQMessageSender rabbitMQMessageSender)
+            IRabbitMQMessageSender rabbitMQMessageSender)
         {
             _repository = repository;
             _rabbitMQMessageSender = rabbitMQMessageSender;
@@ -90,18 +91,17 @@ namespace GeekShopping.OrderAPI.MessageConsumer
 
             PaymentVO payment = new()
             {
-                Name = order.Name + " " + order.LastName,
+                Name = order.FirstName + " " + order.LastName,
                 CardNumber = order.CardNumber,
                 CVV = order.CVV,
-                ExpiryMonthYear = order.ExpiryMothYear,
-                OrderId = order.OrderId,
+                ExpiryMonthYear = order.ExpiryMonthYear,
+                OrderId = order.Id,
                 PurchaseAmount = order.PurchaseAmount,
                 Email = order.Email
             };
-
             try
             {
-                _rabbitMQMessageSender.SendMessage(payment, "orderpaymentprocessqueue")
+                _rabbitMQMessageSender.SendMessage(payment, "orderpaymentprocessqueue");
             }
             catch (Exception)
             {

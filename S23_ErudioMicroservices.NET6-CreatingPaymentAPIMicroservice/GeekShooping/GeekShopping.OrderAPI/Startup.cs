@@ -48,6 +48,7 @@ namespace GeekShopping.OrderAPI
 
             services.AddHostedService<RabbitMQCheckoutConsumer>();
             services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
+
             services.AddControllers();
 
             services.AddAuthentication("Bearer")
