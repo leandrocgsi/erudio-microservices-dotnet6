@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using GeekShopping.MessageBus;
 
 namespace GeekShopping.OrderAPI.Model
 {
@@ -54,5 +55,10 @@ namespace GeekShopping.OrderAPI.Model
 
         [Column("payment_status")]
         public bool PaymentStatus {  get; set; }
+
+        public static explicit operator OrderHeader(BaseMessage v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
