@@ -13,9 +13,10 @@ namespace GeekShopping.PaymentAPI.RabbitMQSender
         private readonly string _password;
         private readonly string _userName;
         private IConnection _connection;
-        private const string ExchangeName = "DirectPaymentUpdateExchange";
+        private const string ExchangeName = "DirectPaymentUpdate_Exchange";
         private const string PaymentEmailUpdateQueueName = "PaymentEmailUpdateQueueName";
         private const string PaymentOrderUpdateQueueName = "PaymentOrderUpdateQueueName";
+
 
         public RabbitMQMessageSender()
         {
@@ -29,8 +30,8 @@ namespace GeekShopping.PaymentAPI.RabbitMQSender
             if(ConnectionExists())
             {
                 using var channel = _connection.CreateModel();
-                channel.ExchangeDeclare(ExchangeName, ExchangeType.Direct, durable: false);
 
+                channel.ExchangeDeclare(ExchangeName, ExchangeType.Direct, durable: false);
                 channel.QueueDeclare(PaymentEmailUpdateQueueName, false, false, false, null);
                 channel.QueueDeclare(PaymentOrderUpdateQueueName, false, false, false, null);
 
