@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.32916.344
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWithASPNETUdemy.NET5", "RestWithASPNETUdemy.NET5\RestWithASPNETUdemy.NET5.csproj", "{7063B4C6-1239-4823-A3BB-56A04052B836}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWithASPNETUdemy.NET6", "RestWithASPNETUdemy.NET6\RestWithASPNETUdemy.NET6.csproj", "{71698964-D198-4E8B-A696-4CA083AE4DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestWithASPNETUdemy.NET7", "RestWithASPNETUdemy.NET7\RestWithASPNETUdemy.NET7.csproj", "{2DB7C934-6C3F-4AA4-8072-76F97DE6AAEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7063B4C6-1239-4823-A3BB-56A04052B836}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7063B4C6-1239-4823-A3BB-56A04052B836}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7063B4C6-1239-4823-A3BB-56A04052B836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71698964-D198-4E8B-A696-4CA083AE4DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71698964-D198-4E8B-A696-4CA083AE4DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71698964-D198-4E8B-A696-4CA083AE4DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71698964-D198-4E8B-A696-4CA083AE4DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB7C934-6C3F-4AA4-8072-76F97DE6AAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB7C934-6C3F-4AA4-8072-76F97DE6AAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB7C934-6C3F-4AA4-8072-76F97DE6AAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB7C934-6C3F-4AA4-8072-76F97DE6AAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
