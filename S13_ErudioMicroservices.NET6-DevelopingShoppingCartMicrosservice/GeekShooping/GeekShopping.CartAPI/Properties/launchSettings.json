@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "GeekShopping.CartAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:49553;http://localhost:49554"
+    }
+  }
+}
