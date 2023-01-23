@@ -5,12 +5,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0-preview.6.21355.2" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.6.21352.1">
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.13" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.0-preview.5" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.13" />
 		<PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.5" />
