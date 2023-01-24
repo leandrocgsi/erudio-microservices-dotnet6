@@ -1,26 +1,25 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
-namespace GeekShopping.APIGateway
-{
-    public class Program
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
     {
-        public static void Main(string[] args)
+        options.Authority = "https://localhost:4435/";
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            ValidateAudience = false
+        };
+    });
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+builder.Services.AddOcelot();
+
+var app = builder.Build();
+
+app.UseOcelot();
+
+app.Run();
