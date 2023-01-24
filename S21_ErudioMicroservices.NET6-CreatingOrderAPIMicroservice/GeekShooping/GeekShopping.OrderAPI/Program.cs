@@ -1,9 +1,6 @@
-using AutoMapper;
 using GeekShopping.CartAPI.Repository;
-using GeekShopping.OrderAPI.Config;
 using GeekShopping.OrderAPI.MessageConsumer;
 using GeekShopping.OrderAPI.Model.Context;
-using GeekShopping.OrderAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
