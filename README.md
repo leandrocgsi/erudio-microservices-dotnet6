@@ -28,3 +28,41 @@
 [![Image](https://raw.githubusercontent.com/leandrocgsi/blog-images/refs/heads/main/formacoes_github/18-rest-spring-kotlin.png "Formação Spring Boot com Kotlin: REST APIs Profissionais do Zero ao Deploy na AWS com Docker e Kubernetes")](https://pub.erudio.com.br/formacao-spring-boot-com-kotlin-rest-apis-profissionais-do-zero-ao-deploy-na-aws-com-docker-e-kubernetes?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
 [![Image](https://raw.githubusercontent.com/leandrocgsi/blog-images/refs/heads/main/formacoes_github/20-kotlin.png "Kotlin para DEV's Java: Domine Lambdas, Generics, Reflections, Programação Funcional e Spring Boot")](https://pub.erudio.com.br/kotlin-para-desenvolvedores-java-domine-sintaxe-lambdas-generics-reflections-programacao-funcional-e-spring-boot?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
 [![Image](https://raw.githubusercontent.com/leandrocgsi/blog-images/refs/heads/main/formacoes_github/30-jasper.png "Crie Relatórios Profissionais com JasperReports, Java, Spring Boot e JasperSoft Studio")](https://pub.erudio.com.br/crie-relatorios-profissionais-com-jasperreports-java-spring-boot-e-jaspersoft-studio?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
+
+# Videos de Apoio
+
+## [Como Configurar Ambiente de DEV ASP.NET no Windows: .NET 10, Visual Studio e SQL Server Guia Completo](https://www.youtube.com/watch?v=dqwARAaweu8)
+
+[![Como Configurar Ambiente de DEV ASP.NET no Windows: .NET 10, Visual Studio e SQL Server Guia Completo](https://img.youtube.com/vi/dqwARAaweu8/maxresdefault.jpg)](https://www.youtube.com/watch?v=dqwARAaweu8)
+
+## [Como Configurar Ambiente de DEV ASP.NET no Linux: .NET 10, Visual Studio e SQL Server Guia Completo](https://www.youtube.com/watch?v=QQlraJMG5pU)
+
+[![Como Configurar Ambiente de DEV ASP.NET no Linux: .NET 10, Visual Studio e SQL Server Guia Completo](https://img.youtube.com/vi/QQlraJMG5pU/maxresdefault.jpg)](https://www.youtube.com/watch?v=QQlraJMG5pU)
+
+## [Roadmap Completo C# e .NET 2026: O Que Estudar Para Ser Desenvolvedor C# .NET e ASP.NET Profissional](https://www.youtube.com/watch?v=UFarLzMhPuo)
+
+[![Roadmap Completo C# e .NET 2026: O Que Estudar Para Ser Desenvolvedor C# .NET e ASP.NET Profissional](https://img.youtube.com/vi/UFarLzMhPuo/maxresdefault.jpg)](https://www.youtube.com/watch?v=UFarLzMhPuo)
+
+## [01 Como Criar sua Primeira API REST com ASP.NET, .NET 10 e C#](https://www.youtube.com/watch?v=g4aRGJYYIn4)
+
+[![01 Como Criar sua Primeira API REST com ASP.NET, .NET 10 e C#](https://img.youtube.com/vi/g4aRGJYYIn4/maxresdefault.jpg)](https://www.youtube.com/watch?v=g4aRGJYYIn4)
+
+## [02 ASP.NET 10 na Prática: Path Params, Validações e Tratamento de Erros](https://www.youtube.com/watch?v=QGuiIwDiXVI)
+
+[![02 ASP.NET 10 na Prática: Path Params, Validações e Tratamento de Erros](https://img.youtube.com/vi/QGuiIwDiXVI/maxresdefault.jpg)](https://www.youtube.com/watch?v=QGuiIwDiXVI)
+
+## [03 ASP.NET com .NET 10 e C#: POST, PUT, DELETE e Listas com JSON na API](https://www.youtube.com/watch?v=4Tpv3iMH6ko)
+
+[![03 ASP.NET com .NET 10 e C#: POST, PUT, DELETE e Listas com JSON na API](https://img.youtube.com/vi/4Tpv3iMH6ko/maxresdefault.jpg)](https://www.youtube.com/watch?v=4Tpv3iMH6ko)
+
+## [04 Como Conectar sua API ASP.NET 10 ao Microsoft SQL Server com Entity Framework na Prática](https://www.youtube.com/watch?v=0yOa31b27W4)
+
+[![04 Como Conectar sua API ASP.NET 10 ao Microsoft SQL Server com Entity Framework na Prática](https://img.youtube.com/vi/0yOa31b27W4/maxresdefault.jpg)](https://www.youtube.com/watch?v=0yOa31b27W4)
+
+## [05 Logging no ASP.NET com .NET 10: Como Configurar e Investigar Erros com Eficiência](https://www.youtube.com/watch?v=45_watSzzD4)
+
+[![05 Logging no ASP.NET com .NET 10: Como Configurar e Investigar Erros com Eficiência](https://img.youtube.com/vi/45_watSzzD4/maxresdefault.jpg)](https://www.youtube.com/watch?v=45_watSzzD4)
+
+
+
+
